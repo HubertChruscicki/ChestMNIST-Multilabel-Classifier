@@ -1,0 +1,12 @@
+{
+  "mode": "all",
+  "with_tune": true,
+  "params": {
+    "filters": 48,
+    "dropout": 0.3,
+    "learning_rate": 0.002,
+    "batch_size": 64,
+    "epochs": 30,
+    "seed": 42
+  }
+}

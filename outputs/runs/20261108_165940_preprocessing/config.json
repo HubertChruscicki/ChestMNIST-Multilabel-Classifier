@@ -1,0 +1,13 @@
+{
+  "mode": "preprocessing",
+  "with_tune": false,
+  "params": {
+    "filters": 32,
+    "dropout": 0.5,
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "epochs": 15,
+    "seed": 42
+  },
+  "model_source": null
+}

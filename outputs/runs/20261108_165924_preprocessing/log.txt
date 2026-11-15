@@ -1,0 +1,20 @@
+[16:59:24] start: tryb preprocessing, wyniki w C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\outputs\runs\20261108_165924_preprocessing
+[16:59:24] dataset: pobieram ChestMNIST przez bibliotekę medmnist...
+[16:59:24] BŁĄD: program zatrzymał się z wyjątkiem
+Traceback (most recent call last):
+  File "C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\main.py", line 98, in main
+    run_pipeline(args, params, model_dir, run_dir)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\main.py", line 59, in run_pipeline
+    splits = load_splits()
+  File "C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\src\dataset.py", line 38, in load_splits
+    data = np.load(download_dataset())
+                   ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\src\dataset.py", line 26, in download_dataset
+    ChestMNIST(split="train", root=str(DATA_DIR), download=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\huber\AppData\Local\Programs\Python\Python313\Lib\site-packages\medmnist\dataset.py", line 50, in __init__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Failed to setup the default `root` directory. Please specify and create the `root` directory manually.

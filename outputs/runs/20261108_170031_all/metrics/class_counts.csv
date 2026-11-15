@@ -1,0 +1,15 @@
+class,train,val,test,train_percent
+atelectasis,7996,1119,2420,10.19
+cardiomegaly,1950,240,582,2.49
+effusion,9261,1292,2754,11.8
+infiltration,13914,2018,3938,17.73
+mass,3988,625,1133,5.08
+nodule,4375,613,1335,5.58
+pneumonia,978,133,242,1.25
+pneumothorax,3705,504,1089,4.72
+consolidation,3263,447,957,4.16
+edema,1690,200,413,2.15
+emphysema,1799,208,509,2.29
+fibrosis,1158,166,362,1.48
+pleural,2279,372,734,2.9
+hernia,144,41,42,0.18

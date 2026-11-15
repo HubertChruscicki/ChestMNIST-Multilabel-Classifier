@@ -1,0 +1,17 @@
+{
+  "macro_auc": 0.7092,
+  "threshold_0.5": {
+    "macro_precision": 0.0,
+    "macro_recall": 0.0,
+    "macro_f1": 0.0,
+    "micro_f1": 0.0,
+    "binary_accuracy": 0.9474
+  },
+  "threshold_per_class": {
+    "macro_precision": 0.1192,
+    "macro_recall": 0.3079,
+    "macro_f1": 0.1651,
+    "micro_f1": 0.2311,
+    "binary_accuracy": 0.8578
+  }
+}

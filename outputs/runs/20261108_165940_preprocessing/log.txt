@@ -1,0 +1,18 @@
+[16:59:40] start: tryb preprocessing, wyniki w C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\outputs\runs\20261108_165940_preprocessing
+[16:59:40] dataset: pobieram ChestMNIST przez bibliotekę medmnist...
+[17:00:06] dataset: pobrano do C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\data\chestmnist.npz
+[17:00:06] dataset: train: obrazy (78468, 28, 28) (uint8), etykiety (78468, 14) (uint8)
+[17:00:06] dataset: val: obrazy (11219, 28, 28) (uint8), etykiety (11219, 14) (uint8)
+[17:00:06] dataset: test: obrazy (22433, 28, 28) (uint8), etykiety (22433, 14) (uint8)
+[17:00:06] preprocessing: start
+[17:00:06] preprocessing: train: 78468 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:00:06] preprocessing: train: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 42405 (54.0%), średnio chorób na obraz: 0.72, max: 9
+[17:00:06] preprocessing: val: 11219 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:00:06] preprocessing: val: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 6079 (54.2%), średnio chorób na obraz: 0.71, max: 6
+[17:00:06] preprocessing: test: 22433 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:00:06] preprocessing: test: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 11928 (53.2%), średnio chorób na obraz: 0.74, max: 7
+[17:00:06] preprocessing: najrzadsza choroba (train): hernia (144 zdjęć), najczęstsza: infiltration (13914 zdjęć)
+[17:00:06] preprocessing: niezbalansowanie klas: najczęstsza jest 97x częstsza niż najrzadsza
+[17:00:07] preprocessing: po skalowaniu (próbka 1000 obrazów): float32, kształt (1000, 28, 28, 1), zakres 0.0-1.0
+[17:00:07] preprocessing: koniec (liczby zdjęć nie zmieniły się, bo żadnych nie usuwamy)
+[17:00:07] koniec: wyniki w C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\outputs\runs\20261108_165940_preprocessing

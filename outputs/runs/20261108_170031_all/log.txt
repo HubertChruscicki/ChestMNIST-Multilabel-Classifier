@@ -1,0 +1,73 @@
+[17:00:31] start: tryb all, wyniki w C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\outputs\runs\20261108_170031_all
+[17:00:31] dataset: plik chestmnist.npz już jest w data/, pomijam pobieranie
+[17:00:31] dataset: train: obrazy (78468, 28, 28) (uint8), etykiety (78468, 14) (uint8)
+[17:00:31] dataset: val: obrazy (11219, 28, 28) (uint8), etykiety (11219, 14) (uint8)
+[17:00:31] dataset: test: obrazy (22433, 28, 28) (uint8), etykiety (22433, 14) (uint8)
+[17:00:31] preprocessing: start
+[17:00:31] preprocessing: train: 78468 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:00:31] preprocessing: train: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 42405 (54.0%), średnio chorób na obraz: 0.72, max: 9
+[17:00:31] preprocessing: val: 11219 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:00:31] preprocessing: val: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 6079 (54.2%), średnio chorób na obraz: 0.71, max: 6
+[17:00:31] preprocessing: test: 22433 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:00:31] preprocessing: test: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 11928 (53.2%), średnio chorób na obraz: 0.74, max: 7
+[17:00:31] preprocessing: najrzadsza choroba (train): hernia (144 zdjęć), najczęstsza: infiltration (13914 zdjęć)
+[17:00:31] preprocessing: niezbalansowanie klas: najczęstsza jest 97x częstsza niż najrzadsza
+[17:00:33] preprocessing: po skalowaniu (próbka 1000 obrazów): float32, kształt (1000, 28, 28, 1), zakres 0.000-0.969
+[17:00:33] preprocessing: koniec (liczby zdjęć nie zmieniły się, bo żadnych nie usuwamy)
+[17:00:33] train: dane treningowe (78468, 28, 28, 1), walidacyjne (11219, 28, 28, 1)
+[17:00:33] train: parametry: {'filters': 32, 'dropout': 0.5, 'learning_rate': 0.001, 'batch_size': 128, 'epochs': 15, 'seed': 42}
+[17:00:34] Model: "sequential"
+┌─────────────────────────────────┬────────────────────────┬───────────────┐
+│ Layer (type)                    │ Output Shape           │       Param # │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ random_rotation                 │ (None, 28, 28, 1)      │             0 │
+│ (RandomRotation)                │                        │               │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ random_zoom (RandomZoom)        │ (None, 28, 28, 1)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d (Conv2D)                 │ (None, 28, 28, 32)     │           320 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d (MaxPooling2D)    │ (None, 14, 14, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_1 (Conv2D)               │ (None, 14, 14, 64)     │        18,496 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d_1 (MaxPooling2D)  │ (None, 7, 7, 64)       │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ flatten (Flatten)               │ (None, 3136)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 64)             │       200,768 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout (Dropout)               │ (None, 64)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 14)             │           910 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 220,494 (861.30 KB)
+ Trainable params: 220,494 (861.30 KB)
+ Non-trainable params: 0 (0.00 B)
+
+[17:00:53] train: epoka 1: loss=0.2202 auc=0.5225 val_loss=0.1763 val_auc=0.6034
+[17:01:05] train: epoka 2: loss=0.1905 auc=0.5593 val_loss=0.1748 val_auc=0.6222
+[17:01:17] train: epoka 3: loss=0.1869 auc=0.5718 val_loss=0.1736 val_auc=0.6348
+[17:01:29] train: epoka 4: loss=0.1847 auc=0.5851 val_loss=0.1730 val_auc=0.6435
+[17:01:41] train: epoka 5: loss=0.1828 auc=0.5936 val_loss=0.1721 val_auc=0.6565
+[17:01:53] train: epoka 6: loss=0.1814 auc=0.6017 val_loss=0.1720 val_auc=0.6624
+[17:02:05] train: epoka 7: loss=0.1801 auc=0.6122 val_loss=0.1714 val_auc=0.6721
+[17:02:17] train: epoka 8: loss=0.1791 auc=0.6171 val_loss=0.1705 val_auc=0.6785
+[17:02:28] train: epoka 9: loss=0.1775 auc=0.6289 val_loss=0.1699 val_auc=0.6796
+[17:02:40] train: epoka 10: loss=0.1768 auc=0.6333 val_loss=0.1699 val_auc=0.6883
+[17:02:52] train: epoka 11: loss=0.1760 auc=0.6418 val_loss=0.1694 val_auc=0.6906
+[17:03:04] train: epoka 12: loss=0.1753 auc=0.6448 val_loss=0.1690 val_auc=0.6923
+[17:03:16] train: epoka 13: loss=0.1746 auc=0.6523 val_loss=0.1688 val_auc=0.6980
+[17:03:28] train: epoka 14: loss=0.1739 auc=0.6568 val_loss=0.1683 val_auc=0.7014
+[17:03:40] train: epoka 15: loss=0.1732 auc=0.6635 val_loss=0.1686 val_auc=0.7021
+[17:03:40] train: koniec po 15 epokach, najlepsza epoka 15 (val_auc=0.7021)
+[17:03:40] train: zapisano model.keras, history.csv i figures/learning_curves.png
+[17:03:40] evaluate: start
+[17:03:41] evaluate: progi dobrane na walidacji: atelectasis=0.17, cardiomegaly=0.05, effusion=0.22, infiltration=0.19, mass=0.08, nodule=0.06, pneumonia=0.03, pneumothorax=0.09, consolidation=0.07, edema=0.08, emphysema=0.04, fibrosis=0.04, pleural=0.06, hernia=0.00
+[17:03:43] evaluate: test: macro AUC = 0.7024
+[17:03:43] evaluate: test: próg 0.5: {'macro_precision': 0.0, 'macro_recall': 0.0, 'macro_f1': 0.0, 'micro_f1': 0.0, 'binary_accuracy': 0.9474}
+[17:03:43] evaluate: test: progi dla klas: {'macro_precision': 0.1098, 'macro_recall': 0.3822, 'macro_f1': 0.1586, 'micro_f1': 0.204, 'binary_accuracy': 0.8145}
+[17:03:43] evaluate: najsłabsze klasy (F1 z progami dla klas): hernia=0.01, pneumonia=0.04, fibrosis=0.06
+[17:03:43] evaluate: zdjęcia z przynajmniej jednym błędem: 15147 z 22433 (67.5%)
+[17:03:43] evaluate: koniec
+[17:03:44] koniec: wyniki w C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\outputs\runs\20261108_170031_all

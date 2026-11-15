@@ -1,0 +1,53 @@
+[17:07:26] start: tryb all, wyniki w C:\Users\huber\Desktop\STUDIA\SEM9\UMWDM\ChestMNIST-Multilabel-Classifier\outputs\runs\20261108_170726_all
+[17:07:26] dataset: plik chestmnist.npz już jest w data/, pomijam pobieranie
+[17:07:26] dataset: train: obrazy (78468, 28, 28) (uint8), etykiety (78468, 14) (uint8)
+[17:07:26] dataset: val: obrazy (11219, 28, 28) (uint8), etykiety (11219, 14) (uint8)
+[17:07:26] dataset: test: obrazy (22433, 28, 28) (uint8), etykiety (22433, 14) (uint8)
+[17:07:26] preprocessing: start
+[17:07:26] preprocessing: train: 78468 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:07:26] preprocessing: train: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 42405 (54.0%), średnio chorób na obraz: 0.72, max: 9
+[17:07:26] preprocessing: val: 11219 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:07:26] preprocessing: val: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 6079 (54.2%), średnio chorób na obraz: 0.71, max: 6
+[17:07:26] preprocessing: test: 22433 obrazów (28, 28), piksele 0-253, całkiem czarne obrazy: 0
+[17:07:26] preprocessing: test: wartości etykiet [0, 1] (poprawnie tylko 0 i 1), bez żadnej choroby: 11928 (53.2%), średnio chorób na obraz: 0.74, max: 7
+[17:07:26] preprocessing: najrzadsza choroba (train): hernia (144 zdjęć), najczęstsza: infiltration (13914 zdjęć)
+[17:07:26] preprocessing: niezbalansowanie klas: najczęstsza jest 97x częstsza niż najrzadsza
+[17:07:28] preprocessing: po skalowaniu (próbka 1000 obrazów): float32, kształt (1000, 28, 28, 1), zakres 0.000-0.969
+[17:07:28] preprocessing: koniec (liczby zdjęć nie zmieniły się, bo żadnych nie usuwamy)
+[17:07:28] tune: sprawdzam 8 kombinacji po 8 epok: {'learning_rate': [0.003, 0.001], 'dropout': [0.3, 0.5], 'filters': [32, 64]}
+[17:07:28] tune: kombinacja 1/8: {'learning_rate': 0.003, 'dropout': 0.3, 'filters': 32}
+[17:07:28] train: dane treningowe (78468, 28, 28, 1), walidacyjne (11219, 28, 28, 1)
+[17:07:28] train: parametry: {'filters': 32, 'dropout': 0.3, 'learning_rate': 0.003, 'batch_size': 128, 'epochs': 8, 'seed': 42}
+[17:07:41] train: epoka 1: loss=0.1930 auc=0.5497 val_loss=0.1753 val_auc=0.6303
+[17:07:52] train: epoka 2: loss=0.1817 auc=0.5897 val_loss=0.1735 val_auc=0.6522
+[17:08:03] train: epoka 3: loss=0.1795 auc=0.6059 val_loss=0.1715 val_auc=0.6635
+[17:08:15] train: epoka 4: loss=0.1778 auc=0.6205 val_loss=0.1720 val_auc=0.6653
+[17:08:27] train: epoka 5: loss=0.1764 auc=0.6325 val_loss=0.1707 val_auc=0.6742
+[17:08:38] train: epoka 6: loss=0.1754 auc=0.6370 val_loss=0.1701 val_auc=0.6753
+[17:08:49] train: epoka 7: loss=0.1742 auc=0.6524 val_loss=0.1691 val_auc=0.6867
+[17:09:00] train: epoka 8: loss=0.1735 auc=0.6574 val_loss=0.1685 val_auc=0.6958
+[17:09:00] train: koniec po 8 epokach, najlepsza epoka 8 (val_auc=0.6958)
+[17:09:00] tune: kombinacja 1: najlepszy val_auc=0.6958
+[17:09:00] tune: kombinacja 2/8: {'learning_rate': 0.003, 'dropout': 0.3, 'filters': 64}
+[17:09:00] train: dane treningowe (78468, 28, 28, 1), walidacyjne (11219, 28, 28, 1)
+[17:09:00] train: parametry: {'filters': 64, 'dropout': 0.3, 'learning_rate': 0.003, 'batch_size': 128, 'epochs': 8, 'seed': 42}
+[17:09:26] train: epoka 1: loss=0.1923 auc=0.5528 val_loss=0.1775 val_auc=0.6336
+[17:09:51] train: epoka 2: loss=0.1816 auc=0.5906 val_loss=0.1730 val_auc=0.6465
+[17:10:15] train: epoka 3: loss=0.1793 auc=0.6079 val_loss=0.1716 val_auc=0.6638
+[17:10:43] train: epoka 4: loss=0.1777 auc=0.6215 val_loss=0.1710 val_auc=0.6699
+[17:11:07] train: epoka 5: loss=0.1766 auc=0.6313 val_loss=0.1709 val_auc=0.6828
+[17:11:33] train: epoka 6: loss=0.1756 auc=0.6373 val_loss=0.1697 val_auc=0.6849
+[17:11:58] train: epoka 7: loss=0.1747 auc=0.6452 val_loss=0.1696 val_auc=0.6887
+[17:12:22] train: epoka 8: loss=0.1739 auc=0.6545 val_loss=0.1690 val_auc=0.6946
+[17:12:22] train: koniec po 8 epokach, najlepsza epoka 8 (val_auc=0.6946)
+[17:12:22] tune: kombinacja 2: najlepszy val_auc=0.6946
+[17:12:22] tune: kombinacja 3/8: {'learning_rate': 0.003, 'dropout': 0.5, 'filters': 32}
+[17:12:22] train: dane treningowe (78468, 28, 28, 1), walidacyjne (11219, 28, 28, 1)
+[17:12:22] train: parametry: {'filters': 32, 'dropout': 0.5, 'learning_rate': 0.003, 'batch_size': 128, 'epochs': 8, 'seed': 42}
+[17:12:35] train: epoka 1: loss=0.2020 auc=0.5360 val_loss=0.1778 val_auc=0.6154
+[17:12:46] train: epoka 2: loss=0.1858 auc=0.5698 val_loss=0.1741 val_auc=0.6310
+[17:12:57] train: epoka 3: loss=0.1824 auc=0.5862 val_loss=0.1737 val_auc=0.6486
+[17:13:08] train: epoka 4: loss=0.1799 auc=0.6021 val_loss=0.1722 val_auc=0.6521
+[17:13:19] train: epoka 5: loss=0.1777 auc=0.6188 val_loss=0.1716 val_auc=0.6642
+[17:13:30] train: epoka 6: loss=0.1762 auc=0.6297 val_loss=0.1712 val_auc=0.6746
+[17:13:41] train: epoka 7: loss=0.1753 auc=0.6406 val_loss=0.1707 val_auc=0.6807
